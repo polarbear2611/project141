@@ -42,7 +42,7 @@ function gotPoses(results) {
     console.log(results);
     rwristx = results[0].pose.rightWrist.x;
     rwristy = results[0].pose.rightWrist.y;
-
+    wristscore=results[0].pose.keypoints[10].score
   }
 }
 
@@ -61,7 +61,7 @@ if(wristscore>0.2)
 {
   fill("red");
   stroke("black");
-  circle(rwristx,rwristy,20);
+  circle(rwristx,rwristy,30);
 }
   //funtion paddleInCanvas call 
   paddleInCanvas();
